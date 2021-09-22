@@ -2,7 +2,13 @@
 
 #This README would normally document whatever steps are necessary to get your application up and running.
 
-1.) Project name : Boko Casino
+Project name : Boko Casino
+
+1.) Team members:
+		Joshua Lopez
+		Adam McBay
+		Alexander Martin
+		Michael Mondragon
 
 2.) We will be creating a series of casino style multiplayer games of chance.
 
@@ -18,7 +24,6 @@ Multiplayer: Ability to connect and interact with other players.
 User story : Multiplayer supported online game.
 GUI : Some graphical representation of interactions in game.  
 User story : Create a casino style game.
-
 
 
 
