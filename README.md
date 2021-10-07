@@ -27,6 +27,12 @@ User story : Create a casino style game.
 
 
 
+Javascript: What we've learned
+	As a team, we have chosen to use javascript in order to make sure our implementation of our game goes hand and hand with our website/HTML. However, none of us are fluent in Javascript and HTML/CSS. But through research, we've been able to dive deeper into Javascript learning about libaries to use to help us in our project.
+
+
+
+
 ### What is this repository for? ###
 
 * Quick summary
