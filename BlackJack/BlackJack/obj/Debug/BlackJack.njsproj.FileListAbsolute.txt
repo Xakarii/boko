@@ -1,3 +1,0 @@
-C:\Users\Alexander\source\repos\BlackJack\BlackJack\obj\Debug\BlackJack.njsproj.AssemblyReference.cache
-C:\Users\Alexander\source\repos\BlackJack\BlackJack\obj\Debug\BlackJack.njsproj.CoreCompileInputs.cache
-C:\Users\Alexander\source\repos\BlackJack\BlackJack\bin\Microsoft.NodejsTools.WebRole.dll

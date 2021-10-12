@@ -1,4 +1,4 @@
-
+///** This was created by Joshua Lopez */
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
 let values = ['Ace', 'King', 'Queen', 'Jack',
   'Ten', 'Nine', 'Eight', 'Seven', 'Six',
