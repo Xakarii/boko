@@ -1,0 +1,17 @@
+class Dealer {
+    constructor() {
+	Dealer()
+
+    }
+
+    addCard(Card card){
+	//add card to hand
+    }
+
+    showOneCard() {
+        //return one card in the dealer hand
+    }
+    
+
+
+}
