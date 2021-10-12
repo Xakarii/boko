@@ -58,3 +58,6 @@ Javascript: What we've learned
 
 * Repo owner or admin
 * Other community or team contact
+
+
+(added hompage to cPanel)
