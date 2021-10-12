@@ -37,6 +37,7 @@ newGameButton.addEventListener('click', function() {
   showStatus();
 })
 
+/** This was created by Alexander Martin */
 function createDeck() {
   let deck = []
   for (let suitIdx = 0; suitIdx < suits.length; suitIdx++) {
