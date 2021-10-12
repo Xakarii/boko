@@ -51,7 +51,7 @@ function createDeck() {
   }
   return deck;
 }
-
+//Contributed by Michael Mondragon
 function shuffleDeck(deck){
   for(let i=0; i<deck.length; i++)
   {
