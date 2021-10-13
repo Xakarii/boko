@@ -62,8 +62,11 @@ The first game on our site is Blackjack and it is functioning.  Next steps invol
 * Other community or team contact
 
 
-(added hompage to cPanel)
+
 
 *Implemented the getScore() method so that it accurately reflects
  scores based on card values and taking Aces being 1 or 11 into consideration. getScore() method
  is accompanied by a comment ending with //Contributed by Michael Mondragon
+ 
+*Created hompage.html and two images that are implemented by the hompage, the hompage links to blackjack and any future games 
+//Contributed by adam mcbay
