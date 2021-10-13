@@ -2,7 +2,7 @@
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
 let values = ['Ace', 'King', 'Queen', 'Jack',
   'Ten', 'Nine', 'Eight', 'Seven', 'Six',
-  'Five', 'Four', 'Three', 'Two', 'One'
+  'Five', 'Four', 'Three', 'Two'  //removed the one value since Ace is handled separately in getScore, One of <suit> was showing up -MM
 ];
 
 let textArea = document.getElementById('text-area');
@@ -179,16 +179,24 @@ function showStatus()
 
 function getScore(cardArray){
   let score = 0;
+  let aceCount = 0;
   let hasAce = false;
   for(let i=0; i<cardArray.length; i++){
     let card = cardArray[i];
     score += getCardNumericValue(card);
     if(card.value == 'Ace'){
       hasAce = true;
+      aceCount += 1;
     }
     
-    if(hasAce && score+10<=21){
-      return score+10;
+    /*Changed the logic so that the game doesn't end early
+      if you get an Ace, previously the game would stop
+      incrementing score if Ace was drawn - Michael Mondragon
+    */
+    if(hasAce){
+      if(aceCount=1 && score+10<=21){score = score+10;}
+      if(aceCount=2 && score+11<=21){score = score+11;}
+      else if (aceCount + score <=21) {score = score+aceCount;}
     }
   }
    return score; 
