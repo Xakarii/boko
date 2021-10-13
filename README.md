@@ -10,20 +10,20 @@ Project name : Boko Casino
 		Alexander Martin
 		Michael Mondragon
 
-2.) We will be creating a series of casino style multiplayer games of chance.
+2.) We will be creating a series of casino style games of chance.
 
 3.) Project will be created for gaming and gambling enthusiasts.
 
-4.) Would like to increase the amount of quality, free, open source, multiplayer games of chance available online.
+4.) Would like to increase the amount of quality, free, open source games of chance available online.
 
 
 Technologies: Javascript
 
 Features : 
-Multiplayer: Ability to connect and interact with other players.  
-User story : Multiplayer supported online game.
+
+User story : Web based online games with a casino theme.
 GUI : Some graphical representation of interactions in game.  
-User story : Create a casino style game.
+User story : Allow a player to experience a variety of web-based games of chance and place bets.
 
 
 
@@ -31,6 +31,8 @@ Javascript: What we've learned
 	As a team, we have chosen to use javascript in order to make sure our implementation of our game goes hand and hand with our website/HTML. However, none of us are fluent in Javascript and HTML/CSS. But through research, we've been able to dive deeper into Javascript learning about libaries to use to help us in our project.
 
 
+Project Status:
+The first game on our site is Blackjack and it is functioning.  Next steps involve adding card graphics and betting functions.
 
 
 ### What is this repository for? ###
@@ -61,3 +63,7 @@ Javascript: What we've learned
 
 
 (added hompage to cPanel)
+
+*Implemented the getScore() method so that it accurately reflects
+ scores based on card values and taking Aces being 1 or 11 into consideration. getScore() method
+ is accompanied by a comment ending with //Contributed by Michael Mondragon
