@@ -32,8 +32,12 @@ Javascript: What we've learned
 
 
 Project Status:
-The first game on our site is Blackjack and it is functioning.  Next steps involve adding card graphics and betting functions.
+The first game on our site is Blackjack and it is functioning. Next steps involve adding card graphics and betting functions.
 
+The group discussed prospects for future game implementations and reusing code from the blackjack game, adding graphics and functionality such as placing bets.
+
+Michael also took a look at how to use the phaser development framework to implement web-games, the ebook tutorial on making a game and Infinite_Jumper_Code are located in the artifacts folder of our project.
+The game is also http://casinoboko.com/phaser_demo/index.html
 
 ### What is this repository for? ###
 
