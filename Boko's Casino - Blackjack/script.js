@@ -51,7 +51,7 @@ function createDeck() {
   }
   return deck;
 }
-//Contributed by Michael Mondragon
+
 function shuffleDeck(deck){
   for(let i=0; i<deck.length; i++)
   {
@@ -176,34 +176,39 @@ function showStatus()
     
   }
 }
-
+    /*Changed the logic so that the game doesn't end early
+      if you get an Ace, previously the game would stop
+      incrementing score if Ace was drawn. Also made
+      getScore handle multiple aces correctly
+      //Contributed by Michael Mondragon
+    */
 function getScore(cardArray){
   let score = 0;
   let aceCount = 0;
   let hasAce = false;
   for(let i=0; i<cardArray.length; i++){
     let card = cardArray[i];
+    if(card.value != 'Ace'){
     score += getCardNumericValue(card);
-    if(card.value == 'Ace'){
+    }
+    else if (card.value == 'Ace'){
       hasAce = true;
-      aceCount += 1;
+      aceCount++;
+      score = score+11;
     }
-    
-    /*Changed the logic so that the game doesn't end early
-      if you get an Ace, previously the game would stop
-      incrementing score if Ace was drawn - Michael Mondragon
-    */
-    if(hasAce){
-      if(aceCount=1 && score+10<=21){score = score+10;}
-      if(aceCount=2 && score+11<=21){score = score+11;}
-      else if (aceCount + score <=21) {score = score+aceCount;}
+    while(aceCount > 0 && score > 21){
+        score = score-10;
+        aceCount--;
+      } 
     }
-  }
+
    return score; 
 }
 
 function updateScores(){
   dealerScore = getScore(dealerCards);
+  console.log("Dealer score is: " + getScore(dealerCards));
+  console.log("Plaeyer score is: " + getScore(playerCards));
   playerScore = getScore(playerCards); 
 }
 
