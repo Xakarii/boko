@@ -69,4 +69,4 @@ The first game on our site is Blackjack and it is functioning.  Next steps invol
  is accompanied by a comment ending with //Contributed by Michael Mondragon
  
 *Created hompage.html and two images that are implemented by the hompage, the hompage links to blackjack and any future games 
-//Contributed by adam mcbay
+//Contributed by adam McBay
