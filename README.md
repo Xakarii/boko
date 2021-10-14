@@ -32,12 +32,8 @@ Javascript: What we've learned
 
 
 Project Status:
-The first game on our site is Blackjack and it is functioning. Next steps involve adding card graphics and betting functions.
+The first game for our site is Blackjack and it is functioning.  Next steps involve adding card graphics, animations, and betting functions.
 
-The group discussed prospects for future game implementations and reusing code from the blackjack game, adding graphics and functionality such as placing bets.
-
-Michael also took a look at how to use the phaser development framework to implement web-games, the ebook tutorial on making a game and Infinite_Jumper_Code are located in the artifacts folder of our project.
-The game is also http://casinoboko.com/phaser_demo/index.html
 
 ### What is this repository for? ###
 
@@ -66,8 +62,16 @@ The game is also http://casinoboko.com/phaser_demo/index.html
 * Other community or team contact
 
 
-(added hompage to cPanel)
+
 
 *Implemented the getScore() method so that it accurately reflects
  scores based on card values and taking Aces being 1 or 11 into consideration. getScore() method
  is accompanied by a comment ending with //Contributed by Michael Mondragon
+ 
+*Created hompage.html and two images that are implemented by the hompage, the hompage links to blackjack and any future games 
+//Contributed by adam McBay
+
+*Implemented the createDeck() method to intialize the creation of a standard 52 card deck, for use in shuffleDeck() method.
+Made simple for easy implementation of future card games, and or features.
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20Casino%20-%20Blackjack/script.js
+//Contributed by Alexander Martin 
