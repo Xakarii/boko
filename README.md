@@ -78,4 +78,5 @@ Made simple for easy implementation of future card games, and or features.
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20Casino%20-%20Blackjack/script.js
 //Contributed by Alexander Martin 
 
-test
+*Created framework for blackjack game on javascript. This mailny inlcudes the logic behind the game of blackjack such as when the player bust', the player loses, etc. Also created the index.html file which is just a small amount of html work done for basic function. 
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20Casino%20-%20Blackjack/script.js
