@@ -70,6 +70,7 @@ The first game for our site is Blackjack and it is functioning.  Next steps invo
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20Casino%20-%20Blackjack/script.js
  
 *Created hompage.html and two images that are implemented by the hompage, the hompage links to blackjack and any future games 
+https://casinoboko.com/home.html
 //Contributed by adam McBay
 
 *Implemented the createDeck() method to intialize the creation of a standard 52 card deck, for use in shuffleDeck() method.
