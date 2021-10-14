@@ -32,7 +32,7 @@ Javascript: What we've learned
 
 
 Project Status:
-The first game on our site is Blackjack and it is functioning.  Next steps involve adding card graphics and betting functions.
+The first game for our site is Blackjack and it is functioning.  Next steps involve adding card graphics, animations, and betting functions.
 
 
 ### What is this repository for? ###
@@ -70,3 +70,8 @@ The first game on our site is Blackjack and it is functioning.  Next steps invol
  
 *Created hompage.html and two images that are implemented by the hompage, the hompage links to blackjack and any future games 
 //Contributed by adam McBay
+
+*Implemented the createDeck() method to intialize the creation of a standard 52 card deck, for use in shuffleDeck() method.
+Made simple for easy implementation of future card games, and or features.
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20Casino%20-%20Blackjack/script.js
+//Contributed by Alexander Martin 
