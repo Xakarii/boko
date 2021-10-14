@@ -75,3 +75,5 @@ The first game for our site is Blackjack and it is functioning.  Next steps invo
 Made simple for easy implementation of future card games, and or features.
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20Casino%20-%20Blackjack/script.js
 //Contributed by Alexander Martin 
+
+test
