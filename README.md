@@ -67,6 +67,7 @@ The first game for our site is Blackjack and it is functioning.  Next steps invo
 *Implemented the getScore() method so that it accurately reflects
  scores based on card values and taking Aces being 1 or 11 into consideration. getScore() method
  is accompanied by a comment ending with //Contributed by Michael Mondragon
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20Casino%20-%20Blackjack/script.js
  
 *Created hompage.html and two images that are implemented by the hompage, the hompage links to blackjack and any future games 
 //Contributed by adam McBay
