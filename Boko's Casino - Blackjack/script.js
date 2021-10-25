@@ -9,6 +9,8 @@ let textArea = document.getElementById('text-area');
 let newGameButton = document.getElementById('new-game-button');
 let hitButton = document.getElementById('hit-button');
 let stayButton = document.getElementById('stay-button');
+let board1 = document.getElementById ('player_board');
+let board2 = document.getElementById ('dealer_board');
 
 hitButton.style.display = 'none';
 stayButton.style.display = 'none';
@@ -20,12 +22,34 @@ let gameStart = false,
   playerCards = [],
   dealerScore = 0,
   playerScore = 0,
+  cardImgCount = 0,
+  gameCount = -1;
   deck = [];
 
 newGameButton.addEventListener('click', function() {
   gameStarted = true;
   gameOver = false;
   playerWon = false;
+  gameCount++;
+
+  //setting the variables that will hold the div id's dealer_board and Player_board to
+  //be used in a loop to remove any existing cards on the board.  Vars are redundant, 
+  //can be replaced later by board1 and board2 or vice versa
+  var dboard = document.getElementById("dealer_board");
+  var pboard = document.getElementById("player_board");
+  console.log(dboard.childNodes.length);
+    for (let i = 0; i < dealerCards.length; i++) {
+      console.log("dboard: " + dboard.childNodes.length);
+      console.log("\ndealer cards: " + dealerCards.length);
+      dboard.removeChild(dboard.childNodes[0]); 
+      //dboard.removeChild(dboard.childNodes[dboard.childNodes.length]);
+    }
+    for (let i = 0; i < playerCards.length; i++) {
+      console.log("pboard: " + pboard.childNodes.length);
+      console.log("\nplayer cards: " + playerCards.length);
+      pboard.removeChild(pboard.childNodes[0]); 
+      //dboard.removeChild(dboard.childNodes[dboard.childNodes.length]);
+    }
 
   deck = createDeck();
   shuffleDeck(deck);
@@ -35,6 +59,23 @@ newGameButton.addEventListener('click', function() {
   hitButton.style.display = 'inline';
   stayButton.style.display = 'inline';
   showStatus();
+
+ 
+  const img = new Image(130, 150); // width, height
+  img.src = getCardImage(playerCards[playerCards.length-2]);
+  document.getElementById("player_board").appendChild(img);
+  const img2 = new Image(130, 150); // width, height
+  img2.src = getCardImage(playerCards[playerCards.length-1]);
+  document.getElementById("player_board").appendChild(img2);
+
+
+  const img3 = new Image(130, 150); // width, height
+  img3.src = "../assets/cards/Cards _large/card_back.png";
+  document.getElementById("dealer_board").appendChild(img3);
+  const img4 = new Image(130, 150); // width, height
+  img4.src = getCardImage(dealerCards[dealerCards.length-1]);
+  document.getElementById("dealer_board").appendChild(img4);
+  
 })
 
 /** This was created by Alexander Martin */
@@ -66,6 +107,10 @@ hitButton.addEventListener('click', function(){
   playerCards.push(getNextCard());
   checkForEndOfGame();
   showStatus();
+  const img = new Image(130, 150); // width, height
+  img.src = getCardImage(playerCards[playerCards.length-1]);
+  img.id = "img";
+  document.getElementById("player_board").appendChild(img);
 });
 
 stayButton.addEventListener('click', function(){
@@ -82,8 +127,19 @@ function checkForEndOfGame(){
           playerScore <=21 &&
           dealerScore <=21){
             dealerCards.push(getNextCard());
+            const img = new Image(130, 150); // width, height
+            img.src = getCardImage(dealerCards[dealerCards.length-1]);
+            img.id = "img";
+            document.getElementById("dealer_board").appendChild(img);
             updateScores();
     }
+    //document.getElementById("dealer_board").removeChild(childNodes[0]); 
+    var dboard = document.getElementById("dealer_board");
+    dboard.removeChild(dboard.childNodes[0]); 
+    const img = new Image(130, 150); // width, height
+    img.src = getCardImage(dealerCards[0]);
+    img.id = "img";
+    document.getElementById("dealer_board").prepend(img);
   }
     
     if(playerScore>21){
@@ -170,6 +226,10 @@ function showStatus()
     else{
       textArea.innerText += "DEALER WINS";
     }
+    //dboard.removeChild(dboard.childNodes[0]); 
+    //document.getElementById("dealer_board").prepend(getCardImage(dealerCards[0]));
+
+
     newGameButton.style.display = 'inline';
     hitButton.style.display = 'none';
     stayButton.style.display = 'none';
@@ -217,3 +277,174 @@ function getNextCard() {
   return deck.shift();
 }
 
+
+function getCardImage(card) {
+  let cardImage = "";
+  if (card.value == 'Ace' && card.suit == 'Spades'){
+      cardImage = "../assets/cards/Cards _large/card_spades_A.png";
+  }
+  else if (card.value == 'Two' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_02.png";
+  }
+  else if (card.value == 'Three' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_03.png";
+  }
+  else if (card.value == 'Four' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_04.png";
+  }
+  else if (card.value == 'Five' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_05.png";
+  }
+  else if (card.value == 'Six' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_06.png";
+  }
+  else if (card.value == 'Seven' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_07.png";
+  }
+  else if (card.value == 'Eight' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_08.png";
+  }
+  else if (card.value == 'Nine' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_09.png";
+  }
+  else if (card.value == 'Ten' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_10.png";
+  }
+  else if (card.value == 'Jack' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_J.png";
+  }
+  else if (card.value == 'Queen' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_Q.png";
+  }
+  else if (card.value == 'King' && card.suit == 'Spades') {
+    cardImage = "../assets/cards/Cards _large/card_spades_K.png";
+  }
+
+  else if (card.value == 'Ace' && card.suit == 'Hearts'){
+    cardImage = "../assets/cards/Cards _large/card_hearts_A.png";
+  }
+  else if (card.value == 'Two' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_02.png";
+  }
+  else if (card.value == 'Three' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_03.png";
+  }
+  else if (card.value == 'Four' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_04.png";
+  }
+  else if (card.value == 'Five' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_05.png";
+  }
+  else if (card.value == 'Six' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_06.png";
+  }
+  else if (card.value == 'Seven' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_07.png";
+  }
+  else if (card.value == 'Eight' && card.suit == 'Hearts') {
+   cardImage = "../assets/cards/Cards _large/card_hearts_08.png";
+  }
+  else if (card.value == 'Nine' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_09.png";
+  }
+  else if (card.value == 'Ten' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_10.png";  
+  }
+  else if (card.value == 'Jack' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_J.png";
+  }
+  else if (card.value == 'Queen' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_Q.png";
+  }
+  else if (card.value == 'King' && card.suit == 'Hearts') {
+    cardImage = "../assets/cards/Cards _large/card_hearts_K.png";
+  }
+
+    
+  else if (card.value == 'Ace' && card.suit == 'Diamonds'){
+    cardImage = "../assets/cards/Cards _large/card_diamonds_A.png";
+  }
+  else if (card.value == 'Two' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_02.png";
+  }
+  else if (card.value == 'Three' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_03.png";
+  }
+  else if (card.value == 'Four' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_04.png";
+  }
+  else if (card.value == 'Five' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_05.png";
+  }
+  else if (card.value == 'Six' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_06.png";
+  }
+  else if (card.value == 'Seven' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_07.png";
+  }
+  else if (card.value == 'Eight' && card.suit == 'Diamonds') {
+   cardImage = "../assets/cards/Cards _large/card_diamonds_08.png";
+  }
+  else if (card.value == 'Nine' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_09.png";
+  }
+  else if (card.value == 'Ten' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_10.png";  
+  }
+  else if (card.value == 'Jack' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_J.png";
+  }
+  else if (card.value == 'Queen' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_Q.png";
+  }
+  else if (card.value == 'King' && card.suit == 'Diamonds') {
+    cardImage = "../assets/cards/Cards _large/card_diamonds_K.png";
+  }
+
+    
+  else if (card.value == 'Ace' && card.suit == 'Clubs'){
+    cardImage = "../assets/cards/Cards _large/card_clubs_A.png";
+  }
+  else if (card.value == 'Two' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_02.png";
+  }
+  else if (card.value == 'Three' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_03.png";
+  }
+  else if (card.value == 'Four' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_04.png";
+  }
+  else if (card.value == 'Five' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_05.png";
+  }
+  else if (card.value == 'Six' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_06.png";
+  }
+  else if (card.value == 'Seven' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_07.png";
+  }
+  else if (card.value == 'Eight' && card.suit == 'Clubs') {
+   cardImage = "../assets/cards/Cards _large/card_clubs_08.png";
+  }
+  else if (card.value == 'Nine' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_09.png";
+  }
+  else if (card.value == 'Ten' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_10.png";  
+  }
+  else if (card.value == 'Jack' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_J.png";
+  }
+  else if (card.value == 'Queen' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_Q.png";
+  }
+  else if (card.value == 'King' && card.suit == 'Clubs') {
+    cardImage = "../assets/cards/Cards _large/card_clubs_K.png";
+  }
+
+  else {
+    cardImage = "../assets/cards/Cards _large/card_back.png";
+  }
+  
+  return cardImage;
+}
