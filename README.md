@@ -61,6 +61,9 @@ The first game for our site is Blackjack and it is functioning.  Next steps invo
 * Repo owner or admin
 * Other community or team contact
 
+Research:
+Future implementation of a betting game where a randomly genarated video of marble races will appear but before it starts the user must bet on what marbel 
+they think will win the race. I have gathered alot of videos and I have looked into how i will set up the betting sysytem.
 
 
 
