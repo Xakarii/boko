@@ -1,13 +1,4 @@
-.header {
-  background-color: slategray;
-  text-align: center;
-  background-color: darkslategrey;
-  color: #F00000;
-  font-weight: bold;
-  padding: 20px;
-  background: #1abc9c;
-  font-size: 10px;
-}
+
 
 body {
     background-color: black;
@@ -29,8 +20,8 @@ h1 {
   }
   h4 {
     display: inline-block;
-    width: 104px;
-    height: 40px;
+    width: 204px;
+    height: 55px;
     font-family: "Arial";
     margin-right: 5px;
     background-color: darkslategrey;
