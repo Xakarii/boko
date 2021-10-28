@@ -8,6 +8,13 @@
   background: #1abc9c;
   font-size: 10px;
 }
+.game_area {
+  max-width: 200px; 
+  min-width: 200px; 
+  background:rgb(63, 119, 26); 
+  display:inline-block;
+  float:left;
+}
 
 body {
     background-color: black;
