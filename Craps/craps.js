@@ -42,7 +42,7 @@ let gameStart = false,
     else {
         let total = roll1 + roll2;
         let resultMsg = '';
-        if (total < 4 || total > 9 ) { win = true; resultMsg = 'You Win!';}
+        if (total < 5 || total > 9 ) { win = true; resultMsg = 'You Win!';}
         else {win = false; resultMsg = 'You lose.';}
   
         textArea.innerText = 'You rolled : ' + roll1 + ' and ' + roll2 + '\n' + 'Total is : ' + (total) + '     ' + resultMsg + '\n';
