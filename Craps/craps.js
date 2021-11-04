@@ -7,6 +7,7 @@ let newGameButton = document.getElementById('new-game-button');
 let rollButton = document.getElementById('roll-button');
 let rollSpace1 = document.getElementById('roll_1');
 let rollSpace2 = document.getElementById('roll_2');
+let win = false;
 rollButton.style.display = 'none';
 
 let gameStart = false,
@@ -40,8 +41,13 @@ let gameStart = false,
     }
     else {
         let total = roll1 + roll2;
-        textArea.innerText = 'You rolled : ' + roll1 + ' and ' + roll2 + '\n' + 'Total is : ' + (total) + '\n';
-    }
+        let resultMsg = '';
+        if (total < 5 || total > 9 ) { win = true; resultMsg = 'You Win!';}
+        else {win = false; resultMsg = 'You lose.';}
+  
+        textArea.innerText = 'You rolled : ' + roll1 + ' and ' + roll2 + '\n' + 'Total is : ' + (total) + '     ' + resultMsg + '\n';
+
+   }
     return;
   }
 
