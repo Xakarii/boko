@@ -4,8 +4,15 @@
 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../Boko's Casino - Blackjack/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
     <style>
+      body {
+        background-image: url('Background.jpeg');
+      }
       ul {
         list-style-type: none;
         margin: 0;
@@ -33,8 +40,6 @@
         background-color: #800000;
       }
       </style>
-      
-  </head>
 
   <body>
     <ul>
@@ -46,12 +51,14 @@
     </div>
     <center>
         <!-- <img src="../assets/dice/dieWhite1.png">-->
-        <img class="logo" src="../Logo_Only.png" height="445" width="530" align="middle">
+        <img class="logo" src="../Logo_Only.png" height="222.5" width="265" align="middle">
          <!--<img src="../assets/dice/dieWhite6.png">-->
+         <br>
       <h4>Simplified Craps</h4><br>
       <!-- if you roll a 2, 3, 4, 10, 11 or 12, you win. If you throw a 5, 6, 7, 8 or 9, you lose.-->
     <button id="new-game-button">New Game!</button>
     <button id="roll-button">Roll!</button>
+    <button onclick = "alert('Rules: Instead of having a lot of complicated bets, Simplified Craps has pretty basic betting system.  \n \n To win a bet you have to roll a particular winning number. \n \n For instance, if you roll a 2, 3, 4, 10, 11 or 12, you win.  \n \n If you throw a 5, 6, 7, 8 or 9, you lose.  \n \n Payouts are determined according to the specific winning number rolled. A 2 pays 3:1, a 3 or 4 pays 1:1 or even money a 10 or 11 pays 2:1, while a 12 pays the highest or 5:1.')">How to Play</button>
     <br>
     <br>
     <div class="game_area" id ="roll_1" width=200 height=200 style="display:inline"></div>
