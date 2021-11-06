@@ -16,6 +16,8 @@ let gameStart = false,
   roll2 = 0,
   rollTotal = 0;
   rolls = [],
+  cash = 100;
+  bet = 10;
   playerScore = 0;
 
   newGameButton.addEventListener('click', function() {
@@ -27,7 +29,15 @@ let gameStart = false,
 
 
   rollButton.addEventListener('click', function(){
-    
+    if (cash <= 0) {
+        if (confirm("You are out of cash.  Would you like to visit an ATM? \nPress ok to withdraw 100 more dollars and roll again!")) {
+            alert("Good luck! I'm sure you can beat the house edge this time!");
+            cash+=100;
+        } else {
+            alert("Perhaps you would enjoy a game with higher stakes?");
+            location.href = 'http://casinoboko.com/phaser_demo/index.html';
+        }
+    }
     rollDice();
     showStatus();
 
@@ -35,6 +45,7 @@ let gameStart = false,
 
   function showStatus() {
     console.log("You rolled a " + roll1 + "and a " + roll2 + "\n");
+    let amount_won = 0;
     if(!gameStarted)
     {
       textArea.innerText = 'Welcome to Simplified Craps!';
@@ -42,11 +53,40 @@ let gameStart = false,
     else {
         let total = roll1 + roll2;
         let resultMsg = '';
-        if (total < 5 || total > 9 ) { win = true; resultMsg = 'You Win!';}
-        else {win = false; resultMsg = 'You lose.';}
+        if (total < 5 || total > 9 ) { 
+            win = true; 
+            if (total == 2) {
+                amount_won = bet*3;
+                cash += bet*3;
+            }
+            else if (total == 3 || total == 4)
+            {
+                amount_won = bet;
+                cash += bet;
+            }
+            else if (total == 10 || total == 11) {
+                amount_won = bet*2;
+                cash += bet*2;
+            }
+            else if (total == 12) {
+                amount_won = bet*5;
+                cash += bet*5;
+            }
+            resultMsg = 'You Win ';
+        }
+        else {
+            win = false; 
+            resultMsg = 'You lost ';
+            cash -= bet;
+            amount_won = bet;
+        }
   
-        textArea.innerText = 'You rolled : ' + roll1 + ' and ' + roll2 + '\n' + 'Total is : ' + (total) + '     ' + resultMsg + '\n';
-
+        if (win === true) {
+        textArea.innerText = 'You rolled : ' + roll1 + ' and ' + roll2 + '\n' + 'Total is : ' + (total) + ' ' + resultMsg + ' ' + amount_won + ' dollars!   You have ' + cash + ' dollars remaining.';
+        }
+        else {
+            textArea.innerText = 'You rolled : ' + roll1 + ' and ' + roll2 + '\n' + 'Total is : ' + (total) + ' ' + resultMsg + ' ' + amount_won + ' dollars!   You have ' + cash + ' dollars remaining.';
+        }
    }
     return;
   }

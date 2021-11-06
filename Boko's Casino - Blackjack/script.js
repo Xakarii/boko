@@ -23,7 +23,10 @@ let gameStart = false,
   dealerScore = 0,
   playerScore = 0,
   cardImgCount = 0,
-  gameCount = -1;
+  gameCount = -1,
+  dealerScoreVis = 0,
+  bet = 10,
+  cash = 100,
   deck = [];
 
 newGameButton.addEventListener('click', function() {
@@ -31,6 +34,15 @@ newGameButton.addEventListener('click', function() {
   gameOver = false;
   playerWon = false;
   gameCount++;
+  if (cash <= 0) {
+    if (confirm("You are out of cash.  Would you like to visit an ATM? \nPress ok to withdraw 100 more dollars and play again!")) {
+        alert("Good luck! I'm sure you can beat the house edge this time!");
+        cash+=100;
+    } else {
+        alert("Perhaps you would enjoy a game with higher stakes?");
+        location.href = 'http://casinoboko.com/phaser_demo/index.html';
+    }
+  }
 
   //setting the variables that will hold the div id's dealer_board and Player_board to
   //be used in a loop to remove any existing cards on the board.  Vars are redundant, 
@@ -198,6 +210,7 @@ function showStatus()
   }
   
   let dealerCardString = '';
+  let dealerCardStringVis = getCardString(dealerCards[1]) + '\n';
   for(let i=0; i<dealerCards.length; i++)
   {
     dealerCardString += getCardString(dealerCards[i]) + '\n';
@@ -210,6 +223,7 @@ function showStatus()
   
   updateScores();
   
+  if (gameOver) {
   textArea.innerText = 'Dealer has:\n' +
                         dealerCardString + 
                         '(score: ' + dealerScore + ')\n\n' +
@@ -217,14 +231,31 @@ function showStatus()
                         'You have:\n' +
                         playerCardString + 
                         '(score: ' + playerScore + ')\n\n';
+  }
+  else {
+    textArea.innerText = 'Dealer has:\n' +
+                        dealerCardStringVis + 
+                        '(score: ' + dealerScoreVis + ')\n\n' +
+                        
+                        'You have:\n' +
+                        playerCardString + 
+                        '(score: ' + playerScore + ')\n\n';
+  }
+
                         
   if(gameOver){
     if(playerWon)
     {
-      textArea.innerText += "YOU WIN!";
+      let wonAmount = bet;
+      cash += bet;
+      let winString = "YOU WIN! " + "  Cash remaining: " + cash + " dollars.";
+      textArea.innerText += winString;
     }
     else{
-      textArea.innerText += "DEALER WINS";
+      let loseAmount = bet;
+      cash -= bet;
+      let loseString =  "DEALER WINS! " + "  Cash remaining: " + cash + " dollars.";
+      textArea.innerText += loseString;
     }
     //dboard.removeChild(dboard.childNodes[0]); 
     //document.getElementById("dealer_board").prepend(getCardImage(dealerCards[0]));
@@ -266,6 +297,7 @@ function getScore(cardArray){
 }
 
 function updateScores(){
+  dealerScoreVis = getScore(dealerCards) - getCardNumericValue(dealerCards[0]);
   dealerScore = getScore(dealerCards);
   console.log("Dealer score is: " + getScore(dealerCards));
   console.log("Plaeyer score is: " + getScore(playerCards));
