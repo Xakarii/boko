@@ -4,73 +4,38 @@
 
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../games.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   </head>
-  <style>
-    body {
-      background-image: url('../craps/Background.jpeg');
-    }
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #69563b;
-      position: -webkit-sticky; 
-      position: sticky;
-      top: 0;
-    }
-    
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover {
-      background-color: #800000;
-    }
-    </style>
-    </head>
-    <body>
+  <body background = "../assets/table.png">
     
     <ul>
       <li><a class="active" href="../home.html">Home</a></li>
       <li><a href="#othergames">Other Games</a></li>
+      <li><a>Welcome to Blackjack!</a></li>
     </ul>
-  </style>
 
-  <body>
-    <div class="header"> 
-        
-
-    </div>
+    <div class="header"></div>
     <center>
-      <!--<img src="../assets/cards/Cards _large/card_back.png"-->
-      <img class="logo" src="../Logo_Only.png" height="222.5" width="265" align="middle">
-      <!--<img src="../assets/cards/Cards _large/card_back.png">-->
+      <img src="../assets/cards/Cards _large/card_back.png">
+      <img class="logo" src="../Logo_Only.png" height="184" width="155" align="middle">
+      <img src="../assets/cards/Cards _large/card_back.png">
+     
       <br>
-      <h4>Welcome to Blackjack!</h4><br>
+
     <button id="new-game-button">New Game!</button>
     <button id="hit-button">Hit</button>
     <button id="stay-button">Stay</button>
     <button onclick = "alert('Rules: 1. The goal of blackjack is to beat the dealer hand without going over 21 \n \n 2. Face cards are worth 10. Aces are worth 1 or 11, whichever makes a better hand \n \n 3. The player starts with two cards, one of the dealers cards is hidden until the end \n \n 4. To Hit is to ask for another card. To Stand is to hold your total and end your turn \n \n 5. If you go over 21 you bust aka lose, and the dealer wins regardless of the dealers hand.')">How to Play</button>
     <br>
+    <div id ="dealer_board" width =500 height=150 style = "display:inline-block"></div>
     <br>
-    <div id ="player_board" width =500 height=150></div>
+    <div id ="player_board" width =500 height=150 style ="display:inline-block"></div>
     <br>
-    <div id ="dealer_board" width =500 height=150></div>
-
     <p id="text-area">Press "New Game" to Start</p>
+    
 
     
     <script src="script.js"></script>
