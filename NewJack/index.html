@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang ="en">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink to fit = no">
+    <link rel="stylesheet" href="../games.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body background: radial-gradiant = black >
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <a class="navbar-brand" href="/">
+		  	<img src="Logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+			  Blackjack
+			</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <div class="navbar-nav my-2 my-lg-0">
+        	<a class="active" href="../home.html">Home</a>
+	        <a href="#othergames">Other Games</a></li>
+		    </div>	
+		 	</div>
+  	</nav>
+
+		<!-- Game area -->
+		<div class="game-area vertical-center">
+			<div class="container">
+
+				<!-- Dealer area -->
+			  <div class="row no-gutters">
+			  	<div class="col-8">
+			    	<div class="value">
+				    	<p class="">Dealer score: <span id="dealer-score"></span></p>
+			    	</div>
+			  	</div>
+			  	<div class="col-4">
+			    	<div class="value text-center">
+				    	<p class="">Cards left: <span id="cards-left"></span></p>
+			    	</div>
+			  	</div>
+				</div>
+
+			  <div class="row dealer-area no-gutters">
+			  	<!-- Dealer cards -->
+			    <div class="col-8">
+			    	<div class="vcenter" id="dealer-cards">
+			    	</div>
+			    </div>
+
+			    <!-- Deck -->
+			    <div class="col-4 deck-area text-center">
+			    	<div class="vcenter"><img src="assets/card_back.png" width="120" class="shadow"></div>
+			    </div>
+
+			  </div> <!-- End of dealer area -->
+
+			  <!-- Player area -->
+			  <div class="row no-gutters">
+		    	<div class="value">
+			    	<p class="">Player score: <span id="player-score"></span></p>
+		    	</div>
+				</div>
+
+		  	<!-- Player cards -->
+			  <div class="row player-area no-gutters">
+			    <div class="col-8">
+				    	<div class="vcenter" id="player-cards">
+				    
+			    	</div>
+			    </div>
+
+			    <!-- Buttons -->
+			    <div class="col-4 container">
+		      	<div class="vcenter">
+				    	<div id="message-area" class="alert invisible border border-dark shadow" role="alert">
+				    		Message text to be replaced
+							</div>
+							<hr>
+			      	<button type="button" class="btn btn-primary btn-block border border-light shadow" id="hit-button">Hit</button>
+			      	<button type="button" class="btn btn-primary btn-block border border-light shadow" id="stand-button">Stand</button>
+			      	<hr>
+			      	<button type="button" class="btn btn-secondary btn-block border border-light shadow" id="new-button">New round</button>
+		      	</div>
+			    </div>
+
+			  </div> <!-- End of player area -->
+
+			  <!-- Score area -->
+			  <div class="row score-area no-gutters">
+			    <div class="col-4 score">
+						<div class="vcenter">
+							<p>Played: <span id="games-played"></span></p>
+						</div>
+			    </div>
+			    <div class="col-4 score">
+						<div class="vcenter">
+							<p>Won: <span id="games-won"></span></p>
+						</div>
+			    </div>
+			    <div class="col-4 score">
+						<div class="vcenter">
+							<p>Lost: <span id="games-lost"></span></p>
+						</div>
+			    </div>
+			  </div> <!-- End of score area -->
+
+			</div> <!-- End of game area -->
+			
+		</div> <!-- End of site -->
+
+		<!-- jQuery, Popper, Bootstrap -->
+	  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<!-- Main script & game logic -->
+		<script type="text/javascript" src="blackjack.js"></script>
+		<script type="text/javascript" src="jQuery.js"></script>
+	</body>
+</html>	
