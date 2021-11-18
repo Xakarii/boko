@@ -43,6 +43,10 @@ Josh - UI improvement, adding to or changing front end display
 Adam - Work on implementing the Marble Race game.
 Michael - Extend betting functionality, add a new dice game.
 
+Tools Used
+
+Navagation Bar - https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
+
 
 ### What is this repository for? ###
 
@@ -121,3 +125,5 @@ https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20C
 
 *Created framework for blackjack game on javascript. This mailny inlcudes the logic behind the game of blackjack such as when the player bust', the player loses, etc. Also created the index.html file which is just a small amount of html work done for basic function. 
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20Casino%20-%20Blackjack/script.js
+
+
