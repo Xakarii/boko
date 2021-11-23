@@ -1,3 +1,10 @@
+//vars for betting, displaying info to player
+let textArea = document.getElementById('text-area');
+let gameStart = false,
+    gameOver = false,
+    cash = 100,
+    bet = 10;
+
 var mine = {
   // (A) PROPERTIES
   // (A1) GAME SETTINGS
@@ -8,6 +15,7 @@ var mine = {
   // (A2) GAME FLAGS
   board : [], // CURRENT GAME BOARD
   rCell : 0, // NUMBER OF REMAINING HIDDEN CELLS
+  
 
   // (B) RESET & INITIALIZE GAME
   reset : function () {
@@ -91,7 +99,7 @@ var mine = {
     if (!mine.board[row][col].x && mine.board[row][col].m) {
       this.classList.add("boom");
       setTimeout(function(){
-        alert("Opps. You lost.");
+        alert("Oops. You lost.");
         mine.reset();
       }, 1);
     }
@@ -147,6 +155,12 @@ var mine = {
   }
 };
 window.addEventListener("DOMContentLoaded", mine.reset);
+
+function setBet() {
+  bet = parseInt(document.getElementById("betAmount").value);
+  console.log("Bet set to " + bet + "\n");
+  document.getElementById("demo").innerHTML = bet;
+}
 
 
 //https://code-boxx.com/simple-javascript-minesweeper/

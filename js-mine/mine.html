@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-      Simple Javascript Minesweeper
-    </title>
-    <link rel="stylesheet" type="text/css" href="mine.css">
+    <title>Simple Javascript Minesweeper</title>
+    <link rel="stylesheet" type="text/css" href="../games.css">
     <script src="mine.js"></script>
   </head>
   <body>
-    <!-- [GAME WRAPPER] -->
-    <div id="mine-wrap"></div>
+    <div class="navbar">
+      <a href="../home.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Other Games 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="../craps/index.html">Craps</a>
+          <a href="../Boko's Casino - Blackjack/index.html">Black Jack</a>
+          <a href="../js-mine/mine.html">Minesweeper</a>
+        </div>
+      </div> 
+    </div>
+  <!--</ul>/-->
+  <!--Nav bar END /-->
+  <center>
+    <img src="../assets/explosion3.png">
+    <img class="logo" src="../Logo_Only.png" height="184" width="155" align="middle">
+    <img src="../assets/explosion3.png">
+    <br>
+    <button id="new-game-button">New Game!</button>
+    <input type="text" id="betAmount" value="10">
+    <button type="button" onclick="setBet()">Change bet amount</button>
+    
+    <button onclick = "alert('Rules: Click on the squares to multiply your bet, but if you click on a mine you lose your wager.')">How to Play</button>
+    <br>
+    <br>
+    <div class="display" style="position:absolute; 
+    top: 400px; right: 60px; margin-top: 20px;
+    margin-right: -10px; font-family: 'Poppins', sans-serif;
+    background-color: #69563b;
+    color: #FFFF;
+    font-weight: bold;
+    font-size: 100%;
+    padding: 0 8px 8px;
+    border-radius: 3px;
+    line-height: 1.3;">Welcome to High Stakes Minesweeper!</div>
+    <br>
+    <center>
+      <!-- [GAME WRAPPER] -->
+      <div id="mine-wrap"></div>
+  </center>
   </body>
 </html>
