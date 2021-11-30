@@ -101,6 +101,8 @@ https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/master/slotmachine.jp
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/master/Blackjack21.jpeg
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/982456861b0852b73834c279140cd90df0d8c03e
 
+//used code from https://code-boxx.com/simple-javascript-minesweeper/ to make minesweeper game
+
  Adam McBay
 
 *Background and Logo added, UI changes
