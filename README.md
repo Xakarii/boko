@@ -95,11 +95,13 @@ https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/1a4a61e945c801e70
 *Changed the look of the splash page and the way buttons are displayed, making them more extensible and
 graphically interesting. The buttons on the main page are styled and positioned with css and send users to
 the corresponging games.
+*created infastrure for the minesweeper game by reserching and editing existing code to fit our needs.
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/a8f6414f12d2a480275f9a032fe7cee5599e8fe5#chg-Artifacts/cover.jpg
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/master/slotmachine.jpeg
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/master/Blackjack21.jpeg
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/982456861b0852b73834c279140cd90df0d8c03e
 
-// Adam McBay
+ Adam McBay
 
 *Background and Logo added, UI changes
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/a03a69fc71576deb16e8fcd75f90e8c2a14dc7e3
