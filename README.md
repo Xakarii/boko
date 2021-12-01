@@ -37,6 +37,10 @@ The first game for our site is Blackjack and it is functioning.  Next steps invo
 As of Sprint 2:
 The second game, Simplified Craps is functioning and basic betting feature has been implemented. Site design has been improved and features new graphics, navigation links a custom logo.
 
+As of Sprint 3:
+BlackJack has been reworked using react with updated graphics and mechanics.  A new game "BombFleecer" a minesweeper-esque game of chance has been implemented, along with navigation and user interface changes.
+
+
 Next steps: 
 Alex - Integrating animations with existing code.
 Josh - UI improvement, adding to or changing front end display
@@ -74,12 +78,34 @@ Navagation Bar - https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp
 * Repo owner or admin
 * Other community or team contact
 
+Final Sprint contributions
+
+//Michael Mondragon
+Added minesweeper functionality, including a new game button and betting functions.
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/db42b2de95dee57c64c556a0073bcb71ca4b698b
+Css refactored to increase code readability and reduce redundancy.
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/f9731a80e6da3fdbba5dde5a3598ffa69631ab69
+
+//Joshua Lopez
+Added music to be used on homepage.
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/fb6cf58da635866c9880a168c1c2f04ae53da36a
+New nav bar with drop down menu for use on game pages. 
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/76483f0525a0fcc8abbd5f96c8eeb81c53cff33b
+
+//Alexander Martin
+Refactored javascript for blackjack making it more object oriented, added changeable betting with JQuery
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/ccf05c681983a275c2f661afb9d71beb9ab45baf
+
+Adam McBay
+*created infrastructure for the minesweeper ("BombFleecer") game by researching and editing existing code to fit our needs.
+https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/982456861b0852b73834c279140cd90df0d8c03e
+
 Research:
 Future implementation of a betting game where a randomly genarated video of marble races will appear but before it starts the user must bet on what marbel 
 they think will win the race. I have gathered alot of videos and I have looked into how i will set up the betting sysytem.
 
-*
-Set up and implemented animations - Alexander Martin
+*Alexander Martin
+Set up and implemented animations 
 This code will be integrated with and used to animate the cards in games such as blackjack. Some refactoring
 may be necessary to integrate with existing code.
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/commits/80c084b224e4d1bbf029b2ec6c5795b0ffb30b29
@@ -131,3 +157,28 @@ https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20C
 https://bitbucket.org/cs3398-f21-klingons/bokos_casino/src/demoBranch/Boko's%20Casino%20-%20Blackjack/script.js
 
 
+
+Asset License for assets used in logos and games (Craps, Blackjack logo, BombFleecer game)
+####################################################################################################################
+	Top-down Tanks Redux
+	Playing Cards Pack
+	Boardgame pack v2
+
+	by  Kenney Vleugels (Kenney.nl)
+	Creation date: 01-12-2020
+			------------------------------
+
+	License (Creative Commons Zero, CC0)
+	http://creativecommons.org/publicdomain/zero/1.0/
+
+	You may use these assets in personal and commercial projects.
+	Credit (Kenney or www.kenney.nl) would be nice but is not mandatory.
+
+			------------------------------
+
+	Donate:   http://support.kenney.nl
+	Request:  http://request.kenney.nl
+
+	Follow on Twitter for updates:
+	@KenneyNL
+####################################################################################################################
